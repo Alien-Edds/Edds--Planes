@@ -1,0 +1,44 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"bridge."
+		]
+	},
+	"header": {
+		"name": "Edds' Planes Remastered 1.21+",
+		"description": "",
+		"min_engine_version": [
+			1,
+			20,
+			50
+		],
+		"uuid": "c175b8d5-b543-4762-8e1e-35f78b72754e",
+		"version": [
+			6,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "e2ea355f-5b6d-48a8-981e-1bc087f0b44b",
+			"version": [
+				6,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "13c6ec91-969b-4d69-9364-281348dad0d6",
+			"version":[
+				6,
+				0,
+				0
+			]
+		}
+	]
+}

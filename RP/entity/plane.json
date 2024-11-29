@@ -1,0 +1,57 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "eddsplanes:plane",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/vehicles/plane_texture"
+			},
+			"geometry": {
+				"default": "geometry.eddsplanes.plane"
+			},
+			"render_controllers": [
+				"controller.render.plane"
+			],
+			"particle_effects": {
+				"smoke": "minecraft:cauldron_explosion_emitter"
+			},
+			"animations": {
+				"propellor_spin": "animation.eddsplanes_plane.propellor_spin",
+				"rotate": "animation.eddsplanes_plane.rotate",
+				"ground_movement": "animation.eddsplanes_plane.ground_movement",
+				"controller": "controller.animation.eddsplanes_plane.movement",
+				"particle": "animation.eddsplanes_plane.particle"
+			},
+			"spawn_egg": {
+				"texture": "eddsplanes_plane_spawn_egg"
+			},
+			"sound_effects": {
+				"propeller": "vehicle.plane.propeller"
+			},
+			"scripts": {
+				"initialize": [
+					"v.pitch = 0.0;",
+					"v.roll = 0.0;",
+					"v.roll_divisor = 2.0;",
+					"v.roll_multiplier = 0.7;"
+				],
+				"pre_animation": [
+					"v.pitch = ((math.clamp(q.is_on_ground ? 0 : q.body_x_rotation, -30, 30) - (math.clamp(q.vertical_speed * 1, 0, 1)) + ( 0.5 * v.pitch)) / 1);",
+					"variable.roll = ((q.is_on_ground ? 0 : (-q.yaw_speed) / v.roll_divisor) + (v.roll_multiplier * v.roll)) / v.roll_divisor;"
+				],
+				"animate": [
+					"controller",
+					{
+						"rotate": "!q.is_on_ground && q.has_player_rider"
+					},
+					{
+						"particle": "!q.is_on_ground && q.has_player_rider"
+					}
+				]
+			}
+		}
+	}
+}

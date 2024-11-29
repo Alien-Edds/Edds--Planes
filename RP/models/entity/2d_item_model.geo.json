@@ -1,0 +1,96 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.eddsplanes.2d_item_model",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root_item",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{
+							"origin": [
+								0,
+								0,
+								-8
+							],
+							"size": [
+								0,
+								16,
+								16
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										2,
+										0
+									],
+									"uv_size": [
+										0,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										7,
+										0
+									],
+									"uv_size": [
+										0,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										7,
+										16
+									],
+									"uv_size": [
+										0,
+										-16
+									]
+								},
+								"down": {
+									"uv": [
+										7,
+										16
+									],
+									"uv_size": [
+										0,
+										-16
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

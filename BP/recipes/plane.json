@@ -1,0 +1,48 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "eddsplanes:plane_spawn_egg"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "*D*",
+            "BAC",
+            "*D*"
+        ],
+        "key": {
+            "A": {
+                "item": "eddsplanes:plane_base"
+            },
+            "B": {
+                "item": "eddsplanes:plane_tail"
+            },
+            "C": {
+                "item": "eddsplanes:plane_propeller"
+            },
+            "D": {
+                "item": "eddsplanes:plane_wing"
+            }
+        },
+        "unlock": [
+            {
+                "item": "eddsplanes:plane_base"
+            },
+            {
+                "item": "eddsplanes:plane_tail"
+            },
+            {
+                "item": "eddsplanes:plane_propeller"
+            },
+            {
+                "item": "eddsplanes:plane_wing"
+            }
+        ],
+        "result": {
+            "item": "eddsplanes:plane_spawn_egg",
+            "data": 0
+        }
+    }
+}

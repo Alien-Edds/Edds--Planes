@@ -1,0 +1,59 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"bridge."
+		]
+	},
+	"header": {
+		"name": "Edds' Planes Remastered 1.21+",
+		"description": "",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "13c6ec91-969b-4d69-9364-281348dad0d6",
+		"version": [
+			6,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "7353324c-0c50-42db-a91f-88e6743c19cb",
+			"version": [
+				6,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "b8c47f5f-5738-4789-92c7-9154d2a5c3f8",
+			"entry": "scripts/main.js",
+			"version": [
+				6,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.11.0"
+		},
+		{
+			"uuid": "c175b8d5-b543-4762-8e1e-35f78b72754e",
+			"version": [
+				6,
+				0,
+				0
+			]
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "eddsplanes:plane_propeller",
+			"is_experimental": false,
+			"menu_category": {
+				"category": "items",
+				"is_hidden_in_commands": false
+			}
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Plane Propeller"
+			},
+			"minecraft:icon": "eddsplanes_plane_propellor"
+		}
+	}
+}

@@ -1,0 +1,36 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "eddsplanes:plane_base"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "ABA",
+            "AAA",
+            "ABA"
+        ],
+        "key": {
+            "A": {
+                "item": "minecraft:oak_planks"
+            },
+            "B": {
+                "item": "minecraft:minecart"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:oak_planks"
+            },
+            {
+                "item": "minecraft:minecart"
+            }
+        ],
+        "result": {
+            "item": "eddsplanes:plane_base",
+            "data": 0
+        }
+    }
+}

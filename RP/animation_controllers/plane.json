@@ -1,0 +1,36 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.eddsplanes_plane.movement": {
+            "initial_state": "ground",
+            "states": {
+                "ground": {
+                    "blend_transition": true,
+                    "animations": [
+                        {
+                            "ground_movement": "query.modified_move_speed"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "air": "!query.is_on_ground"
+                        }
+                    ]
+                },
+                "air": {
+                    "blend_transition": true,
+                    "animations": [
+                        {
+                            "propellor_spin": "query.modified_move_speed"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "ground": "query.is_on_ground"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

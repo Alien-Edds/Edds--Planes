@@ -1,0 +1,297 @@
+{
+    "gas_can_0": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_0",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.9'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "gas_can_1": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_1",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.8'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "gas_can_2": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_2",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.7'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "gas_can_3": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_3",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.6'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "gas_can_4": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_4",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.5'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "gas_can_5": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_5",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.4'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "gas_can_6": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_6",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.3'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "gas_can_7": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_7",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.2'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "gas_can_8": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_8",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.1'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "gas_can_9": {
+        "type": "image",
+        "texture": "textures/ui/eddsplanes/gas_can_9",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [
+            25,
+            25
+        ],
+        "offset": [
+            108,
+            -2
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#hud_title_text_string = 'eddsplanes.0'))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "root_panel": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "gas_can_0@hud.gas_can_0": {}
+                    },
+                    {
+                        "gas_can_1@hud.gas_can_1": {}
+                    },
+                    {
+                        "gas_can_2@hud.gas_can_2": {}
+                    },
+                    {
+                        "gas_can_3@hud.gas_can_3": {}
+                    },
+                    {
+                        "gas_can_4@hud.gas_can_4": {}
+                    },
+                    {
+                        "gas_can_5@hud.gas_can_5": {}
+                    },
+                    {
+                        "gas_can_6@hud.gas_can_6": {}
+                    },
+                    {
+                        "gas_can_7@hud.gas_can_7": {}
+                    },
+                    {
+                        "gas_can_8@hud.gas_can_8": {}
+                    },
+                    {
+                        "gas_can_9@hud.gas_can_9": {}
+                    }
+                ]
+            }
+        ]
+    },
+    "hud_title_text/title_frame/title": {
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_back",
+                "value": [
+                    {
+                        "binding_type": "view",
+                        "source_property_name": "(not ((#text = 'eddsplanes.9') or (#text = 'eddsplanes.8') or (#text = 'eddsplanes.7') or (#text = 'eddsplanes.6') or (#text = 'eddsplanes.5') or (#text = 'eddsplanes.4') or (#text = 'eddsplanes.3') or (#text = 'eddsplanes.2') or (#text = 'eddsplanes.1') or (#text = 'eddsplanes.0')))",
+                        "target_property_name": "#visible"
+                    }
+                ]
+            }
+        ]
+    }
+}

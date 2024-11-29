@@ -1,0 +1,36 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "eddsplanes:plane_propeller"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "*A*",
+            "ABA",
+            "*A*"
+        ],
+        "key": {
+            "A": {
+                "item": "minecraft:white_wool"
+            },
+            "B": {
+                "item": "minecraft:coal_block"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:white_wool"
+            },
+            {
+                "item": "minecraft:coal_block"
+            }
+        ],
+        "result": {
+            "item": "eddsplanes:plane_propeller",
+            "data": 0
+        }
+    }
+}

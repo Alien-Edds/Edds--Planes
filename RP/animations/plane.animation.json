@@ -1,0 +1,114 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.eddsplanes_plane.propellor_spin": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"propellor": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							720
+						]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "propeller"
+				}
+			}
+		},
+		"animation.eddsplanes_plane.rotate": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [
+						"v.pitch",
+						0,
+						"v.roll"
+					]
+				}
+			}
+		},
+		"animation.eddsplanes_plane.ground_movement": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"wheel1": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							360,
+							0,
+							0
+						]
+					}
+				},
+				"wheel2": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							360,
+							0,
+							0
+						]
+					}
+				},
+				"wheel3": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							360,
+							0,
+							0
+						]
+					}
+				},
+				"wheel4": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							360,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.eddsplanes_plane.particle": {
+			"animation_length": 1.0,
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "smoke",
+					"locator": "particle"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"vehicle.plane.propeller": {
+			"category": "neutral",
+			"max_distance": 5,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/plane_propeller",
+					"volume": 0.25,
+					"stream": true
+				}
+			]
+		}
+	}
+}
