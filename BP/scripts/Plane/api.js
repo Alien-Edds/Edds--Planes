@@ -37,6 +37,7 @@ export class PlaneAPI {
         let isLoaded = false;
         await new Promise(resolve => {
             const firstTick = world.getAbsoluteTime();
+            Overworld.runCommand("scriptevent eddsplanes:is_loaded");
             const event = system.afterEvents.scriptEventReceive.subscribe((data) => {
                 if (data.id != "eddsplanes:loaded")
                     return;
@@ -64,7 +65,9 @@ export class PlaneAPI {
     }
     constructor() {
         system.afterEvents.scriptEventReceive.subscribe((data) => {
-            const consumableItem = this.registery.consumableItems.find((f) => f.codeId == data.id);
+            if (data.id !== "eddsplanes:consume_item")
+                return;
+            const consumableItem = this.registery.consumableItems.find((f) => f.itemID === data.message);
             if (!consumableItem)
                 return;
             const player = data.sourceEntity;

@@ -73,20 +73,13 @@
 			},
 			"minecraft:rideable": {
 				"controlling_seat": 0,
-				"seat_count": 2,
+				"seat_count": 1,
 				"seats": [
 					{
 						"position": [
 							0,
 							0.25,
 							1
-						]
-					},
-					{
-						"position": [
-							0,
-							0.25,
-							-0.5
 						]
 					}
 				]

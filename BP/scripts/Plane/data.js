@@ -73,8 +73,7 @@ registery.registerPlane({
 //CONSUMABLES
 registery.registerConsumableItem({
     itemID: "minecraft:tnt",
-    cooldown: 12,
-    codeId: "eddsplanes:default_tnt_item_code",
+    cooldown: 8,
     code: (player, plane) => {
         EntityManager.spawnEntityAnywhere("minecraft:tnt", plane.location, player.dimension);
     }

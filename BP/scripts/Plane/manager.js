@@ -64,7 +64,7 @@ export class PlaneManager {
                 this.runConsumables(driver, plane);
             }
             else
-                this.setCooldown(plane, 12);
+                this.setCooldown(plane, 4);
         }
         else {
             const inv = plane.getComponent(EntityInventoryComponent.componentId);
@@ -113,9 +113,10 @@ export class PlaneManager {
     static setCamera(player, plane, distance) {
         const viewDir = player.getViewDirection();
         const headLocation = player.getHeadLocation();
+        const rot = player.getRotation();
         const cameraLocation = {
             x: headLocation.x + (-viewDir.x * distance.xz),
-            y: (headLocation.y + 1) + ((-viewDir.y * distance.y) * 1.0),
+            y: (headLocation.y + (rot.x < 0 ? 3 : 1)) + ((-viewDir.y * distance.y) * 1.0),
             z: headLocation.z + (-viewDir.z * distance.xz)
         };
         const facing = {
@@ -216,7 +217,7 @@ export class PlaneManager {
                 else {
                     container.setItem(container.size - (i + 1), undefined);
                 }
-                player.runCommand(`scriptevent ${consumableData.codeId}`);
+                player.runCommand(`scriptevent eddsplanes:consume_item ${consumableData.itemID}`);
                 cooldownAmount = consumableData.cooldown;
             }
             this.setCooldown(plane, cooldownAmount);

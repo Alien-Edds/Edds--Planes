@@ -2,7 +2,6 @@ import { EntityHealthComponent, MinecraftDimensionTypes, system, world } from "@
 import { PlaneRegistration } from "./Plane/data";
 import { PlaneManager } from "./Plane/manager";
 PlaneRegistration.initialize();
-world.getDimension(MinecraftDimensionTypes.overworld).runCommand("scriptevent eddsplanes:loaded");
 world.beforeEvents.itemUseOn.subscribe((data) => {
     if (data.block.typeId != "minecraft:mob_spawner" && data.block.typeId != "minecraft:trial_spawner")
         return;
@@ -37,4 +36,9 @@ world.afterEvents.entityHitEntity.subscribe((data) => {
     if (ownerID != player.id)
         return;
     PlaneManager.pickupPlane(plane);
+});
+system.afterEvents.scriptEventReceive.subscribe((data) => {
+    if (data.id != "eddsplanes:is_loaded")
+        return;
+    world.getDimension(MinecraftDimensionTypes.overworld).runCommand("scriptevent eddsplanes:loaded");
 });

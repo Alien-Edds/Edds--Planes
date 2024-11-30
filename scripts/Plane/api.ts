@@ -13,21 +13,41 @@ export interface Plane {
 }
 
 export interface FuelItem {
+    /**
+     * The item identifier.
+     */
     itemID: string,
+    /**
+     * The amount of fuel this item gives. 4 = 1 second of fuel.
+     */
     fuelAmount: number,
+    /**
+     * Optional parameter to replace this item with another item when it's used. eg: lava bucket -> bucket
+     */
     replaceWith?: {
+        /**
+         * The item identifier.
+         */
         itemID: string,
+        /**
+         * The item amount.
+         */
         amount: number
     }
 }
 
 export interface ConsumableItem {
+    /**
+     * The item identifier.
+     */
     itemID: string,
+    /**
+     * The cooldown that this item starts after it's used. No consumable items will be usable during this time. 1 = 5 ticks
+     */
     cooldown: number,
     /**
-    * @remarks The id for the script event for this to run. Example: 'my_addon:my_item'
-    */
-    codeId: string
+     * Code to run when this consumable item is used.
+     */
     code: (player: Player, plane: Entity) => void
 }
 
@@ -73,6 +93,7 @@ export class PlaneAPI {
         let isLoaded = false
         await new Promise(resolve => {
             const firstTick = world.getAbsoluteTime()
+            Overworld.runCommand("scriptevent eddsplanes:is_loaded")
             const event = system.afterEvents.scriptEventReceive.subscribe((data) => {
                 if (data.id != "eddsplanes:loaded") return
                 system.afterEvents.scriptEventReceive.unsubscribe(event)
@@ -99,7 +120,8 @@ export class PlaneAPI {
     }
     constructor() {
         system.afterEvents.scriptEventReceive.subscribe((data) => {
-            const consumableItem = (this.registery.consumableItems as ConsumableItem[]).find((f) => f.codeId == data.id)
+            if (data.id !== "eddsplanes:consume_item") return
+            const consumableItem = (this.registery.consumableItems as ConsumableItem[]).find((f) => f.itemID === data.message)
             if (!consumableItem) return
             const player = data.sourceEntity
             if (!player || !(player instanceof Player)) return

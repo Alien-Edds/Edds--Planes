@@ -62,7 +62,7 @@ export class PlaneManager {
                 this.setFuel(plane, fuel - planeData.fuelConsumption)
                 this.flyKnockback(plane, planeData, driver)
                 this.runConsumables(driver, plane)
-            } else this.setCooldown(plane, 12)
+            } else this.setCooldown(plane, 4)
         } else {
             const inv = plane.getComponent(EntityInventoryComponent.componentId) as EntityInventoryComponent
             const container = inv.container
@@ -105,9 +105,10 @@ export class PlaneManager {
     static setCamera(player: Player, plane: Entity, distance: {y: number, xz: number}): void {
         const viewDir = player.getViewDirection()
         const headLocation = player.getHeadLocation()
+        const rot = player.getRotation()
         const cameraLocation: Vector3 = {
             x: headLocation.x + (-viewDir.x * distance.xz),
-            y: (headLocation.y + 1) + ((-viewDir.y * distance.y) * 1.0),
+            y: (headLocation.y + (rot.x < 0 ? 3 : 1)) + ((-viewDir.y * distance.y) * 1.0),
             z: headLocation.z + (-viewDir.z * distance.xz)
         }
         const facing: Vector3 = {
@@ -194,7 +195,7 @@ export class PlaneManager {
                 } else {
                     container.setItem(container.size - (i + 1), undefined)
                 }
-                player.runCommand(`scriptevent ${consumableData.codeId}`)
+                player.runCommand(`scriptevent eddsplanes:consume_item ${consumableData.itemID}`)
                 cooldownAmount = consumableData.cooldown
             }
             this.setCooldown(plane, cooldownAmount)
