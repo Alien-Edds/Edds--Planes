@@ -3,9 +3,21 @@ import { Entity, EntityRidingComponent, MinecraftDimensionTypes, Player, system,
 export const Overworld = world.getDimension(MinecraftDimensionTypes.overworld)
 
 export interface Plane {
+    /**
+     * The plane entity identifier.
+     */
     entityID: string,
+    /**
+     * The speed that the plane will fly at.
+     */
     speed: number,
+    /**
+     * The speed the plane consumes fuel at. Default: 1
+     */
     fuelConsumption: number,
+    /**
+     * Optional parameter for a custom camera.
+     */
     camera?: {
         yDist: number,
         xzDist: number
