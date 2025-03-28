@@ -3,19 +3,19 @@
 	"texture_name": "atlas.items",
 	"texture_data": {
 		"eddsplanes_plane_spawn_egg": {
-			"textures": "textures/spawn_egg/plane_spawn_egg"
+			"textures": "textures/eddsplanes/spawn_egg/plane_spawn_egg"
 		},
 		"eddsplanes_plane_tail": {
-			"textures": "textures/items/plane_tail"
+			"textures": "textures/eddsplanes/items/plane_tail"
 		},
 		"eddsplanes_plane_wing": {
-			"textures": "textures/items/plane_wing"
+			"textures": "textures/eddsplanes/items/plane_wing"
 		},
 		"eddsplanes_plane_propellor": {
-			"textures": "textures/items/plane_propellor"
+			"textures": "textures/eddsplanes/items/plane_propellor"
 		},
 		"eddsplanes_plane_base": {
-			"textures": "textures/items/plane_base"
+			"textures": "textures/eddsplanes/items/plane_base"
 		}
 	}
 }

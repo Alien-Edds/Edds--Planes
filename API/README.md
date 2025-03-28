@@ -1,0 +1,2 @@
+# API
+To make addons that work with this plane addon, paste one of the API files into your script(TS or JS, preferably TS) and then use its various functions after initializing it. // const api = new PlaneAPI();

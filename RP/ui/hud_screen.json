@@ -1,7 +1,7 @@
 {
     "gas_can_0": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_0",
+        "texture": "textures/eddsplanes/ui/gas_can_0",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -25,7 +25,7 @@
     },
     "gas_can_1": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_1",
+        "texture": "textures/eddsplanes/ui/gas_can_1",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -49,7 +49,7 @@
     },
     "gas_can_2": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_2",
+        "texture": "textures/eddsplanes/ui/gas_can_2",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -73,7 +73,7 @@
     },
     "gas_can_3": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_3",
+        "texture": "textures/eddsplanes/ui/gas_can_3",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -97,7 +97,7 @@
     },
     "gas_can_4": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_4",
+        "texture": "textures/eddsplanes/ui/gas_can_4",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -121,7 +121,7 @@
     },
     "gas_can_5": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_5",
+        "texture": "textures/eddsplanes/ui/gas_can_5",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -145,7 +145,7 @@
     },
     "gas_can_6": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_6",
+        "texture": "textures/eddsplanes/ui/gas_can_6",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -169,7 +169,7 @@
     },
     "gas_can_7": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_7",
+        "texture": "textures/eddsplanes/ui/gas_can_7",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -193,7 +193,7 @@
     },
     "gas_can_8": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_8",
+        "texture": "textures/eddsplanes/ui/gas_can_8",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -217,7 +217,7 @@
     },
     "gas_can_9": {
         "type": "image",
-        "texture": "textures/ui/eddsplanes/gas_can_9",
+        "texture": "textures/eddsplanes/ui/gas_can_9",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "size": [
@@ -287,7 +287,7 @@
                 "value": [
                     {
                         "binding_type": "view",
-                        "source_property_name": "(not ((#text = 'eddsplanes.9') or (#text = 'eddsplanes.8') or (#text = 'eddsplanes.7') or (#text = 'eddsplanes.6') or (#text = 'eddsplanes.5') or (#text = 'eddsplanes.4') or (#text = 'eddsplanes.3') or (#text = 'eddsplanes.2') or (#text = 'eddsplanes.1') or (#text = 'eddsplanes.0')))",
+                        "source_property_name": "((#text - 'eddsplanes.') = #text)",
                         "target_property_name": "#visible"
                     }
                 ]

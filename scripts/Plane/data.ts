@@ -82,6 +82,15 @@ registery.registerFuelItem({
 })
 
 registery.registerFuelItem({
+    itemID: "eddsjetpacks:oil_bucket",
+    fuelAmount: 350,
+    replaceWith: {
+        itemID: "minecraft:bucket",
+        amount: 1
+    }
+})
+
+registery.registerFuelItem({
     itemID: "minecraft:charcoal",
     fuelAmount: 20
 })

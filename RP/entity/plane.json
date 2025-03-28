@@ -7,7 +7,7 @@
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/vehicles/plane_texture"
+				"default": "textures/eddsplanes/entity/vehicles/plane_texture"
 			},
 			"geometry": {
 				"default": "geometry.eddsplanes.plane"
