@@ -1,4 +1,4 @@
-import { Entity, MinecraftDimensionTypes, Player, system, world } from "@minecraft/server";
+import { Entity, EntityProjectileComponent, MinecraftDimensionTypes, Player, system, world } from "@minecraft/server";
 import { EntityManager } from "../Entity/manager";
 import { ConsumableItem, FuelItem, Plane, PlaneAPI } from "./api";
 
@@ -71,6 +71,20 @@ registery.registerConsumableItem({
     }
 })
 
+registery.registerConsumableItem({
+    itemID: "minecraft:arrow",
+    cooldown: 2,
+    code: (player: Player, plane: Entity) => {
+        const viewDir = player.getViewDirection()
+        const arrow = EntityManager.spawnEntityAnywhere("minecraft:arrow", plane.location, player.dimension)
+        const comp = arrow.getComponent(EntityProjectileComponent.componentId) as EntityProjectileComponent | undefined
+        if (!comp) return
+        comp.owner = plane
+        comp.shoot({x: viewDir.x * 2.5, y: viewDir.y * 2.5, z: viewDir.z * 2.5})
+        player.playSound("random.bow")
+    }
+})
+
 //FUEL
 registery.registerFuelItem({
     itemID: "minecraft:lava_bucket",
@@ -99,6 +113,17 @@ registery.registerFuelItem({
     itemID: "minecraft:coal",
     fuelAmount: 20
 })
+
+registery.registerFuelItem({
+    itemID: "minecraft:blaze_rod",
+    fuelAmount: 40
+})
+
+registery.registerFuelItem({
+    itemID: "minecraft:blaze_powder",
+    fuelAmount: 20
+})
+
 
 registery.registerFuelItem({
     itemID: "minecraft:coal_block",
