@@ -1,7 +1,31 @@
-import { Block, Dimension, EasingType, Entity, EntityInventoryComponent, EntityRideableComponent, EntityRidingComponent, ItemStack, Player, Vector3, world } from "@minecraft/server";
+import { Block, Dimension, EasingType, Entity, EntityInventoryComponent, EntityRideableComponent, EntityRidingComponent, ItemStack, MinecraftDimensionTypes, Player, system, Vector3, world } from "@minecraft/server";
 import { PlaneRegistration } from "./data";
 import { roundUp } from "../Math/roundUp";
 import { Plane, RiddenPlane } from "./api";
+let firstPersonLoaded = false
+
+async function checkDynamicFirstPersonLoaded() {
+    let loaded = false
+    await new Promise((resolve) => {
+        const event = system.afterEvents.scriptEventReceive.subscribe((data) => {
+            if (data.id !== "ae_fpm:loaded") return
+            loaded = true
+            resolve(resolve)
+            system.clearRun(timeout)
+            system.afterEvents.scriptEventReceive.unsubscribe(event)
+        })
+        const timeout = system.runTimeout(() => {
+            system.afterEvents.scriptEventReceive.unsubscribe(event)
+            resolve(resolve)
+        }, 5)
+        world.getDimension(MinecraftDimensionTypes.overworld).runCommand("scriptevent ae_fpm:check_loaded")
+    })
+    firstPersonLoaded = loaded
+}
+
+checkDynamicFirstPersonLoaded()
+
+
 
 export class PlaneManager {
 
@@ -21,7 +45,7 @@ export class PlaneManager {
                 if (player.hasTag("eddsplanes.driving_plane")) {
                     player.onScreenDisplay.setTitle("§a")
                     player.removeTag("eddsplanes.driving_plane")
-                    player.camera.clear()
+                    if (!(firstPersonLoaded && player.hasTag("ae_fpm.is_first_person"))) player.camera.clear()
                 }
                 continue
             }
@@ -33,7 +57,7 @@ export class PlaneManager {
                 if (player.hasTag("eddsplanes.driving_plane")) {
                     player.onScreenDisplay.setTitle("§a")
                     player.removeTag("eddsplanes.driving_plane")
-                    player.camera.clear()
+                    if (!(firstPersonLoaded && player.hasTag("ae_fpm.is_first_person"))) player.camera.clear()
                 }
                 continue
             }
@@ -46,7 +70,7 @@ export class PlaneManager {
         const { plane, driver } = data
         const planeData = PlaneRegistration.planes.find((f) => f.entityID == plane.typeId)
         if (!planeData) return
-        if (planeData.camera) {
+        if (planeData.camera) if (!(firstPersonLoaded && driver.hasTag("ae_fpm.is_first_person"))) {
             if (plane.isOnGround) {
                 this.setCamera(driver, plane, {y: planeData.camera.yDist * 0.7, xz: planeData.camera.xzDist * 0.7})
             } else this.setCamera(driver, plane, {y: planeData.camera.yDist, xz: planeData.camera.xzDist})

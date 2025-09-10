@@ -4,7 +4,7 @@
 		"product_type": "addon"
 	},
 	"header": {
-		"name": "Edds' Planes Remastered 1.21+ v1.1.0",
+		"name": "Edds' Planes Remastered 1.21+ v1.2.0",
 		"description": "",
 		"min_engine_version": [
 			1,
@@ -13,7 +13,7 @@
 		],
 		"uuid": "c175b8d5-b543-4762-8e1e-35f78b72754e",
 		"version": [
-			8,
+			9,
 			0,
 			0
 		]
@@ -23,7 +23,7 @@
 			"type": "resources",
 			"uuid": "e2ea355f-5b6d-48a8-981e-1bc087f0b44b",
 			"version": [
-				8,
+				9,
 				0,
 				0
 			]
@@ -33,7 +33,7 @@
 		{
 			"uuid": "13c6ec91-969b-4d69-9364-281348dad0d6",
 			"version":[
-				8,
+				9,
 				0,
 				0
 			]
